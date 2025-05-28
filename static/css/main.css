@@ -43,6 +43,7 @@ a:hover {
   --main-color: #121212;
   --text-color: #eeeeee;
   --nav-links-color: #9b9b9b;
+  --bg-color: #222022;
   --header-font: "NeueHaasGrotesk-55Roman";
   --text-font: "NeueHaasGroteskText-65Regular";
 }
@@ -160,29 +161,119 @@ a:hover {
 
 /****************************************** Hero ************************************/
 #hero {
-  margin-top: 30%;
+  margin-top: 17%;
 }
 .hero-intro {
   margin: 3%;
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  padding: 3%;
 }
 .hero-intro h1 {
   color: var(--text-color);
   letter-spacing: 1px;
   font-family: var(--header-font);
-  font-size: 2.4rem;
   font-weight: bold;
-  margin-top: 5%;
-  line-height: 1.1;
+  font-size: 2.1rem;
+  margin-top: 3%;
 }
-.hero-intro p {
+.hero-intro h6 {
   color: #9b9b9b;
   letter-spacing: 1px;
   font-family: var(--text-font);
-  font-size: 1.1rem;
-  line-height: 1.2;
-  margin-top: 3%;
+  font-size: 1rem;
+  margin-top: 10%;
+}
+.hero-intro .examples {
+  display: inline-block;
+}
+.hero-intro #terminal_img {
+  width: 21px;
+}
+.hero-intro .examples li {
+  list-style: none;
+  color: var(--text-color);
+  letter-spacing: 1px;
+  font-family: var(--text-font);
+  font-size: 1rem;
+  margin-bottom: 2%;
 }
 
+/* prompt_form */
+#prompt_form {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.col-md-12 {
+  position: relative;
+  width: 100%;
+  padding: 0;
+}
+
+.input {
+  color: var(--text-color);
+  letter-spacing: 1px;
+  font-family: var(--text-font);
+  font-size: 1.1rem;
+  border: 1px solid #918d917e;
+  background: #2f2d2f;
+  margin-bottom: 3%;
+  border-radius: 25px;
+  width: 100%;
+  padding: 16px 60px 16px 24px;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  box-shadow: none !important;
+  outline: 0px !important;
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
+}
+
+.input::placeholder {
+  color: #9b9b9b;
+  letter-spacing: 1px;
+  font-family: var(--text-font);
+  font-size: 0.9rem;
+}
+
+.submit-btn {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#submit_img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+}
+
+.g-3 {
+  gap: 1rem;
+}
 /****************************************** Intro ************************************/
 
 /********************** Extra small devices (portrait phones, less than 576px) ****************************/
@@ -207,22 +298,34 @@ a:hover {
 @media (min-width: 1200px) {
   /* hero */
   #hero {
-    margin-top: 10%;
+    margin-top: 5%;
   }
   .hero-intro {
-    margin: 3%;
+    margin: 1%;
+    padding: 2%;
   }
   .hero-intro h1 {
-    font-size: 6rem;
-    margin-top: 0%;
-    line-height: 1;
+    font-size: 3.1rem;
+    margin-top: 1%;
+    text-align: center;
+  }
+  .hero-intro h6 {
+    color: #9b9b9b;
+    letter-spacing: 1px;
+    font-family: var(--text-font);
+    font-size: 1rem;
+    margin-top: 7%;
+    margin-left: 3%;
+  }
+  .hero-intro .examples {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .hero-intro #terminal_img {
+    width: 21px;
+  }
+  .hero-intro .examples li {
+    font-size: 1rem;
     margin-bottom: 2%;
-  }
-  .hero-intro h1 span {
-    display: block;
-  }
-  .hero-intro p {
-    font-size: 1.2rem;
-    margin-top: 0%;
   }
 }

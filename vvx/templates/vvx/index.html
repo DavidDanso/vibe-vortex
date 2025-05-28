@@ -56,7 +56,37 @@
       <!--=============================================== Hero ===================================-->
       <div id="hero">
         <div class="container-fluid">
-          <div class="hero-intro"></div>
+          <div class="hero-intro">
+            <h1>Generate Spotify playlists using simple text prompts.</h1>
+            <h6>try these examples:</h6>
+            <ul class="examples">
+              <li>
+                <img src="{% static 'images/terminal.png' %}" id="terminal_img" class="img-fluid" alt="terminal_img" />
+                Give me top 2 songs from Drake and 3 random songs by Taylor Swift
+              </li>
+              <li>
+                <img src="{% static 'images/terminal.png' %}" id="terminal_img" class="img-fluid" alt="terminal_img" />
+                I want 3 songs by Billie Eilish and 2 from Post Malone
+              </li>
+            </ul>
+            <!-- end examples -->
+
+            <div id="prompt_form">
+              <form method="POST" class="row g-3">
+                {% csrf_token%}
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control input" id="inputPrompt" placeholder="Ask VibeVortex..." name="inputPrompt" />
+                  <button type="submit" class="submit-btn">
+                    <img src="{% static 'images/send.png' %}" id="submit_img" class="img-fluid" alt="submit_img" />
+                  </button>
+                </div>
+                <!-- end inputPrompt -->
+              </form>
+              <!-- End form-->
+            </div>
+            <!-- end prompt_form -->
+          </div>
           <!-- end hero-intro -->
         </div>
         <!-- end container-fluid -->
