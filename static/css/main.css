@@ -161,14 +161,16 @@ a:hover {
 
 /****************************************** Hero ************************************/
 #hero {
-  margin-top: 40%;
+  margin-top: 20%;
 }
 .hero-intro {
   margin: 3%;
   background-color: var(--bg-color);
   border-radius: 10px;
   padding: 3%;
-  /* height: 85vh; */
+  position: relative;
+  min-height: 10vh;
+  padding-bottom: 70px;
 }
 .hero-intro h1 {
   color: var(--text-color);
@@ -188,6 +190,7 @@ a:hover {
 }
 .hero-intro .examples {
   display: inline-block;
+  margin-bottom: -3%;
 }
 .hero-intro #terminal_img {
   width: 21px;
@@ -206,6 +209,11 @@ a:hover {
   max-width: 800px;
   margin: 0 auto;
   margin-top: -5%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
 }
 #prompt_form .row {
   display: flex;
@@ -270,6 +278,75 @@ a:hover {
 .g-3 {
   gap: 1rem;
 }
+
+/****************************************** playlist ************************************/
+#playlist {
+  margin-top: 5%;
+}
+#playlist h5 {
+  color: var(--text-color);
+  letter-spacing: 1px;
+  font-family: var(--header-font);
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 4%;
+}
+#playlist #playlist_img {
+  width: 21px;
+}
+#playlist-songs {
+  max-height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-bottom: 60%;
+  scroll-behavior: smooth;
+}
+#playlist-songs::-webkit-scrollbar {
+  width: 6px;
+}
+#playlist-songs::-webkit-scrollbar-track {
+  background: var(--bg-color);
+  border-radius: 1px;
+}
+#playlist-songs::-webkit-scrollbar-thumb {
+  background: var(--bg-color);
+  border-radius: 1px;
+}
+#playlist-songs::-webkit-scrollbar-thumb:hover {
+  background: var(--bg-color);
+}
+#playlist-songs .col-md-4 {
+  margin-bottom: 2%;
+}
+#playlist-songs .card {
+  background-color: #efefe7;
+  border: none;
+}
+#playlist_icon {
+  width: 27%;
+  margin-bottom: 15%;
+}
+#playlist_icon_0 {
+  width: 30px;
+}
+#playlist h3 {
+  color: var(--main-color);
+  letter-spacing: 1px;
+  font-family: var(--header-font);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+#playlist h6 {
+  color: var(--main-color);
+  letter-spacing: 1px;
+  font-family: var(--text-font);
+  font-size: 1.1rem;
+  margin-top: 5%;
+  margin-bottom: 0;
+}
+#playlist h6 span {
+  float: right;
+}
 /****************************************** footer ************************************/
 footer {
   position: fixed;
@@ -314,28 +391,36 @@ footer p {
 @media (min-width: 1200px) {
   /* hero */
   #hero {
-    margin-top: 15%;
+    margin-top: 5%;
   }
+  /* #playlist_avaliable { */
+  /* margin-top: 12%; */
+  /* } */
   .hero-intro {
     margin: 1%;
     padding: 2%;
+    position: relative;
+    min-height: 50vh;
+    padding-bottom: 70px;
   }
   .hero-intro h1 {
     font-size: 3rem;
     margin-top: 0%;
     text-align: center;
   }
+
   .hero-intro h6 {
     color: #9b9b9b;
     letter-spacing: 1px;
     font-family: var(--text-font);
     font-size: 1rem;
-    margin-top: 7%;
+    margin-top: 3%;
     margin-left: 3%;
   }
   .hero-intro .examples {
     display: flex;
     justify-content: space-evenly;
+    margin-bottom: -1%;
   }
   .hero-intro #terminal_img {
     width: 21px;
@@ -345,10 +430,46 @@ footer p {
     margin-bottom: 2%;
   }
 
+  /* playlist */
+  #playlist {
+    margin-top: 1px;
+  }
+  #playlist h5 {
+    font-size: 0.95rem;
+    margin-bottom: 2%;
+  }
+  #playlist #playlist_img {
+    width: 17px;
+  }
+
+  #playlist-songs {
+    max-height: 400px;
+    margin-bottom: 7%;
+  }
+  #playlist-songs .col-md-4 {
+    margin-bottom: 1%;
+  }
+  #playlist_icon {
+    width: 19%;
+    margin-bottom: 11%;
+  }
+  #playlist_icon_0 {
+    width: 27px;
+  }
+  #playlist h3 {
+    font-size: 1rem;
+  }
+  #playlist h6 {
+    font-size: 1rem;
+    margin-top: 3%;
+    margin-bottom: 0;
+  }
+
   /* prompt_form */
   #prompt_form {
     max-width: 1300px;
     margin-top: -2%;
+    padding: 15px;
   }
   .input {
     font-size: 1rem;
