@@ -161,13 +161,14 @@ a:hover {
 
 /****************************************** Hero ************************************/
 #hero {
-  margin-top: 17%;
+  margin-top: 40%;
 }
 .hero-intro {
   margin: 3%;
   background-color: var(--bg-color);
   border-radius: 10px;
   padding: 3%;
+  /* height: 85vh; */
 }
 .hero-intro h1 {
   color: var(--text-color);
@@ -176,6 +177,7 @@ a:hover {
   font-weight: bold;
   font-size: 2.1rem;
   margin-top: 3%;
+  line-height: 1.1;
 }
 .hero-intro h6 {
   color: #9b9b9b;
@@ -196,27 +198,25 @@ a:hover {
   letter-spacing: 1px;
   font-family: var(--text-font);
   font-size: 1rem;
-  margin-bottom: 2%;
+  margin-bottom: 3%;
 }
 
 /* prompt_form */
 #prompt_form {
   max-width: 800px;
   margin: 0 auto;
+  margin-top: -5%;
 }
-
-.row {
+#prompt_form .row {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
 }
-
-.col-md-12 {
+#prompt_form .col-md-12 {
   position: relative;
   width: 100%;
   padding: 0;
 }
-
 .input {
   color: var(--text-color);
   letter-spacing: 1px;
@@ -227,28 +227,26 @@ a:hover {
   margin-bottom: 3%;
   border-radius: 25px;
   width: 100%;
-  padding: 16px 60px 16px 24px;
+  padding: 8px 24px 8px 24px;
   box-sizing: border-box;
 }
-
 .input:focus {
   box-shadow: none !important;
   outline: 0px !important;
   border: 1px solid var(--text-color);
   color: var(--text-color);
+  background: #2f2d2f;
 }
-
 .input::placeholder {
   color: #9b9b9b;
   letter-spacing: 1px;
   font-family: var(--text-font);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
-
 .submit-btn {
   position: absolute;
   right: 8px;
-  top: 50%;
+  top: 42%;
   transform: translateY(-50%);
   background: none;
   border: none;
@@ -260,21 +258,39 @@ a:hover {
   justify-content: center;
   transition: background-color 0.2s ease;
 }
-
 .submit-btn:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
-
 #submit_img {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   filter: brightness(0) invert(1);
 }
 
 .g-3 {
   gap: 1rem;
 }
-/****************************************** Intro ************************************/
+/****************************************** footer ************************************/
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 1000;
+}
+footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+footer p {
+  margin: 0;
+  text-align: center;
+  color: #9b9b9bb3;
+  font-size: 0.95rem;
+  font-family: var(--text-font);
+}
 
 /********************** Extra small devices (portrait phones, less than 576px) ****************************/
 @media (max-width: 575.98px) {
@@ -298,15 +314,15 @@ a:hover {
 @media (min-width: 1200px) {
   /* hero */
   #hero {
-    margin-top: 5%;
+    margin-top: 15%;
   }
   .hero-intro {
     margin: 1%;
     padding: 2%;
   }
   .hero-intro h1 {
-    font-size: 3.1rem;
-    margin-top: 1%;
+    font-size: 3rem;
+    margin-top: 0%;
     text-align: center;
   }
   .hero-intro h6 {
@@ -327,5 +343,33 @@ a:hover {
   .hero-intro .examples li {
     font-size: 1rem;
     margin-bottom: 2%;
+  }
+
+  /* prompt_form */
+  #prompt_form {
+    max-width: 1300px;
+    margin-top: -2%;
+  }
+  .input {
+    font-size: 1rem;
+    margin-bottom: 0%;
+    padding: 7px 24px 7px 24px;
+  }
+  .input::placeholder {
+    font-size: 0.9rem;
+  }
+  .submit-btn {
+    right: 8px;
+    top: 50%;
+    padding: 8px;
+  }
+  #submit_img {
+    width: 21px;
+    height: 21px;
+  }
+
+  /* footer */
+  footer p {
+    font-size: 0.9rem;
   }
 }
